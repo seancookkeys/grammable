@@ -4,7 +4,7 @@ RSpec.describe GramsController, type: :controller do
   describe "grams#show action" do
     it "should successfully show the page if the gram is found" do
       gram = FactoryBot.create(:gram)
-      get :show, params: { id: gram.id: }
+      get :show, params: { id: gram.id }
       expect(response).to have_http_status(:success)
     end
 
